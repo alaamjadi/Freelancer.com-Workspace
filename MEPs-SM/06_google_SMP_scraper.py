@@ -16,7 +16,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from urllib.parse import urlparse
 
-
 # Configuration
 GOOGLE_URL = "https://www.google.com/search?q="
 
@@ -126,12 +125,14 @@ class GoogleScraper:
                     add_to_category(contact, "website", item)
                 else:
                     add_to_category(contact, "other", item)
-
         except Exception as e:
             print(f"❌ Error: Error processing {member['id']}: {str(e)}")
-        
         finally:
-            member['status'] = "GOOGLE-SMP-SCRAPED"
+            social_media_keys = ["facebook", "instagram", "twitter", "linkedin", "youtube", "tiktok"]
+            if all(contact.get(key) is None for key in social_media_keys):
+                member["status"] = "GOOGLE-SMP-NOSOCIAL"
+            else:
+                member["status"] = "GOOGLE-SMP-SCRAPED"
             return member
 
     def run(self, data):
@@ -160,6 +161,7 @@ class GoogleScraper:
 
         finally:
             try:
+                print("✅ Success: MEP's social information was scraped from Google.")
                 self.driver.quit()
             except Exception:
                 pass
