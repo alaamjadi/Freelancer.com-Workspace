@@ -1,4 +1,6 @@
-[**Go back to the main landing page**](../index.md)
+[![Freelancer.com-Workspace Repository](https://img.shields.io/badge/Repo-Freelancer.com_Workspace-red)](https://github.com/alaamjadi/Freelancer.com-Workspace)
+
+[![MEPs-SM Repository](https://img.shields.io/badge/Repo-Freelancer.com_Workspace/MEPs--SM-red)](https://github.com/alaamjadi/Freelancer.com-Workspace/tree/main/MEPs-SM)
 
 # Members of the European Parliament's Social Media (MEPs-SM)
 
