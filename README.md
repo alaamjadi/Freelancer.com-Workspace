@@ -2,8 +2,6 @@
 
 [![Documentation](https://img.shields.io/badge/Doc-GitHub_Pages-blue)](https://alaamjadi.github.io/Freelancer.com-Workspace/)
 
-[![Repository](https://img.shields.io/badge/Repo-Freelancer.com_Workspace-red)](https://github.com/alaamjadi/Freelancer.com-Workspace)
-
 ## Projects
 
 |         **Duration**          |           **Name**            |                                                      **Description**                                                       |
