@@ -1,4 +1,5 @@
 import xml.etree.ElementTree as ET
+import defusedxml.ElementTree as DefusedET
 import json
 import os
 import sys
@@ -19,7 +20,7 @@ def meps_xml_to_json(xml_file, json_file):
             sys.exit(1)
     else:
         try:
-            tree = ET.parse(xml_file)
+            tree = DefusedET.parse(xml_file)
             root = tree.getroot()
 
             meps_data = []
